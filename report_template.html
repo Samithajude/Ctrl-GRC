@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Security Posture Report for MSME</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f0f2f5; color: #333; line-height: 1.6; }
+        h1, h2, h3, h4 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 35px; }
+        h1 { font-size: 2.8em; text-align: center; border-bottom: 4px solid #3498db; padding-bottom: 15px; margin-bottom: 40px; color: #2980b9;}
+        h2 { font-size: 2.2em; border-bottom: 2px solid #aec6cf; padding-bottom: 8px;}
+        h3 { font-size: 1.6em; color: #34495e; border-bottom: 1px dashed #dcdcdc; padding-bottom: 5px; margin-top: 25px;}
+        .score-box {
+            background-color: #ffffff;
+            border: 1px solid #e0e6ec;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .score-box .overall-score {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .score-box .overall-score.critical { color: #e74c3c; } /* Red */
+        .score-box .overall-score.high { color: #e67e22; } /* Orange */
+        .score-box .overall-score.medium { color: #f1c40f; } /* Yellow */
+        .score-box .overall-score.strong { color: #27ae60; } /* Green */
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff;}
+        th, td { border: 1px solid #dee1e6; padding: 15px; text-align: left; }
+        th { background-color: #3498db; color: white; font-weight: bold; text-transform: uppercase; font-size: 0.9em; }
+        tr:nth-child(even) { background-color: #f8fbfd; }
+        tr:hover { background-color: #e9f5ff; }
+
+        .recommendation-table { margin-top: 20px; }
+        .recommendation-table th.priority-col { width: 120px; }
+        .priority-critical { background-color: #fadedc; color: #c0392b; font-weight: bold; }
+        .priority-high { background-color: #fdebd0; color: #d35400; font-weight: bold; }
+        .priority-medium { background-color: #fdf5e6; color: #f39c12; font-weight: bold; }
+        .priority-low { background-color: #eaf7ed; color: #27ae60; }
+        .no-recommendations {
+            font-style: italic;
+            color: #27ae60;
+            margin-left: 20px;
+            padding: 15px;
+            background-color: #eaf7ed;
+            border-left: 5px solid #27ae60;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .executive-summary {
+            background-color: #e8f4f8;
+            border-left: 6px solid #3498db;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .executive-summary strong { color: #2c3e50; }
+
+        .priority-legend {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fdfefe;
+            border: 1px solid #dce4e6;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+        .priority-legend div { margin-bottom: 5px; }
+        .priority-legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+        .priority-legend .crit-box { background-color: #e74c3c; }
+        .priority-legend .high-box { background-color: #e67e22; }
+        .priority-legend .med-box { background-color: #f1c40f; }
+        .priority-legend .low-box { background-color: #27ae60; }
+
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85em;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Security Posture Report</h1>
+
+    <div class="score-box">
+        <h2>Overall Security Posture Score</h2>
+        {% set score_class = "" %}
+        {% if percentage < 50 %}
+            {% set score_class = "critical" %}
+        {% elif percentage < 70 %}
+            {% set score_class = "high" %}
+        {% elif percentage < 85 %}
+            {% set score_class = "medium" %}
+        {% else %}
+            {% set score_class = "strong" %}
+        {% endif %}
+        <p class="overall-score {{ score_class }}">{{ total_score }} / {{ max_total }} ({{ percentage }}%)</p>
+        <p>This score reflects your overall security posture and control implementation across various domains.</p>
+    </div>
+
+    <h2>Executive Summary</h2>
+    <div class="executive-summary">
+        <p>{{ executive_summary | safe }}</p>
+    </div>
+
+    <h2>Domain-wise Performance</h2>
+    <table>
+        <tr>
+            <th>Domain</th>
+            <th>Score</th>
+            <th>Percentage</th>
+        </tr>
+        {% for domain, score in domain_scores.items() %}
+        <tr>
+            <td>{{ domain }}</td>
+            <td>{{ score }} / {{ domain_max_scores[domain] }}</td>
+            <td>{{ domain_percentages[domain] }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Recommendations for Improvement</h2>
+    <p>Based on your responses, here are specific areas and actions to enhance your security posture. Prioritize recommendations marked as 'Critical' or 'High'.</p>
+
+    <div class="priority-legend">
+        <h4>Recommendation Priority Legend:</h4>
+        <div><span class="crit-box"></span> <strong>Critical:</strong> Immediate action required, significant risk.</div>
+        <div><span class="high-box"></span> <strong>High:</strong> Urgent attention needed, potentially severe impact.</div>
+        <div><span class="med-box"></span> <strong>Medium:</strong> Important improvement, moderate risk.</div>
+        <div><span class="low-box"></span> <strong>Low:</strong> Minor improvement, lower risk.</div>
+    </div>
+
+    {% for domain, recs in domain_recommendations.items() %}
+        <h3>{{ domain }}</h3>
+        {% if recs %}
+        <table class="recommendation-table">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>How to Improve</th>
+                    <th class="priority-col">Priority</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rec in recs %}
+                <tr>
+                    <td>{{ rec.question }}</td>
+                    <td>{{ rec.answer }}</td>
+                    <td>{{ rec.how_to }}</td>
+                    <td class="priority-{{ rec.priority | lower }}">{{ rec.priority }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="no-recommendations">No specific recommendations for this domain. You've demonstrated strong controls here!</p>
+        {% endif %}
+    {% endfor %}
+
+    <footer>
+        <p>Report generated on {{ current_date }}</p>
+        <p>This report is for informational purposes and should be validated by a security professional.</p>
+    </footer>
+</body>
+</html>

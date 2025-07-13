@@ -1,0 +1,6 @@
+gspread
+google-auth
+pandas
+jinja2
+pdfkit
+matplotlib
