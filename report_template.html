@@ -2,13 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Security Posture Report for MSME</title>
+    <title>Security Posture Report for {{ org_name_raw }}</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f0f2f5; color: #333; line-height: 1.6; }
         h1, h2, h3, h4 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 35px; }
-        h1 { font-size: 2.8em; text-align: center; border-bottom: 4px solid #3498db; padding-bottom: 15px; margin-bottom: 40px; color: #2980b9;}
+        h1 { font-size: 2.8em; text-align: center; border-bottom: 4px solid #3498db; padding-bottom: 15px; margin-bottom: 10px; color: #2980b9;}
         h2 { font-size: 2.2em; border-bottom: 2px solid #aec6cf; padding-bottom: 8px;}
         h3 { font-size: 1.6em; color: #34495e; border-bottom: 1px dashed #dcdcdc; padding-bottom: 5px; margin-top: 25px;}
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
         .score-box {
             background-color: #ffffff;
             border: 1px solid #e0e6ec;
@@ -23,10 +31,10 @@
             font-weight: bold;
             margin: 10px 0;
         }
-        .score-box .overall-score.critical { color: #e74c3c; } /* Red */
-        .score-box .overall-score.high { color: #e67e22; } /* Orange */
-        .score-box .overall-score.medium { color: #f1c40f; } /* Yellow */
-        .score-box .overall-score.strong { color: #27ae60; } /* Green */
+        .score-box .overall-score.critical { color: #e74c3c; }
+        .score-box .overall-score.high { color: #e67e22; }
+        .score-box .overall-score.medium { color: #f1c40f; }
+        .score-box .overall-score.strong { color: #27ae60; }
 
         table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-color: #fff;}
         th, td { border: 1px solid #dee1e6; padding: 15px; text-align: left; }
@@ -50,6 +58,7 @@
             border-radius: 5px;
             margin-top: 15px;
         }
+
         .executive-summary {
             background-color: #e8f4f8;
             border-left: 6px solid #3498db;
@@ -59,7 +68,6 @@
             font-size: 1.1em;
             line-height: 1.8;
         }
-        .executive-summary strong { color: #2c3e50; }
 
         .priority-legend {
             margin-top: 30px;
@@ -84,7 +92,6 @@
         .priority-legend .med-box { background-color: #f1c40f; }
         .priority-legend .low-box { background-color: #27ae60; }
 
-
         footer {
             text-align: center;
             margin-top: 60px;
@@ -97,6 +104,7 @@
 </head>
 <body>
     <h1>Security Posture Report</h1>
+    <div class="subtitle">for {{ org_name_raw }}</div>
 
     <div class="score-box">
         <h2>Overall Security Posture Score</h2>
