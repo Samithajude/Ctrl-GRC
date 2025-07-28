@@ -4,297 +4,627 @@
     "domain": "SECTION 2 - Security Policies & Procedures",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes, for all areas": 2, "Partial / informal": 1, "No": 0},
+    "rules": {
+      "Yes, for all areas": 2,
+      "Partial / informal": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / informal": "Formalize partial policies into fully documented policies to ensure clarity and compliance.",
-      "No": "Develop and document comprehensive security policies that cover acceptable use, data handling, incident response, and more."
-    }
+      "Partial / informal": "Formalize partial policies into fully documented policies to ensure clarity and compliance. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Develop and document comprehensive security policies that cover acceptable use, data handling, incident response, and more. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to security policies & procedures.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "How often are your policies reviewed?",
     "domain": "SECTION 2 - Security Policies & Procedures",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Annually": 2, "Every 2–3 years": 1, "Rarely / Never": 0},
+    "rules": {
+      "Annually": 2,
+      "Every 2\u20133 years": 1,
+      "Rarely / Never": 0
+    },
     "best_practices": {
-      "Every 2–3 years": "Review policies at least annually to ensure they stay current with evolving risks.",
-      "Rarely / Never": "Establish an annual review process for all security policies."
-    }
+      "Every 2\u20133 years": "Review policies at least annually to ensure they stay current with evolving risks. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Rarely / Never": "Establish an annual review process for all security policies. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to security policies & procedures.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Are employees trained on these policies?",
     "domain": "SECTION 2 - Security Policies & Procedures",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes, regularly": 2, "Only at onboarding / sometimes": 1, "No": 0},
+    "rules": {
+      "Yes, regularly": 2,
+      "Only at onboarding / sometimes": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Only at onboarding / sometimes": "Introduce ongoing refresher sessions and practical workshops.",
-      "No": "Create a regular employee training program on key security policies."
-    }
+      "Only at onboarding / sometimes": "Introduce ongoing refresher sessions and practical workshops. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Create a regular employee training program on key security policies. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to security policies & procedures.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Is Multi-Factor Authentication (MFA) enforced on critical systems?",
     "domain": "SECTION 2 - Security Policies & Procedures",
     "max_score": 2,
-    "weight": 2,  "rules": {"Yes, everywhere": 2, "Partial / planned": 1, "No": 0},
+    "weight": 2,
+    "rules": {
+      "Yes, everywhere": 2,
+      "Partial / planned": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / planned": "Expand MFA to all critical systems, not just selected applications.",
-      "No": "Implement MFA for all systems that handle sensitive data or admin access."
-    }
+      "Partial / planned": "Expand MFA to all critical systems, not just selected applications. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Implement MFA for all systems that handle sensitive data or admin access. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to security policies & procedures.",
+    "recommendation_level": "High",
+    "remediation_time_estimate": "1-2 weeks",
+    "evidence_required": true,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you have an Acceptable Use Policy for devices & internet?",
     "domain": "SECTION 2 - Security Policies & Procedures",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Partial / informal": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Partial / informal": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / informal": "Turn informal guidelines into a written Acceptable Use Policy everyone signs.",
-      "No": "Draft and distribute an Acceptable Use Policy covering email, Browse, remote work, and devices."
-    }
+      "Partial / informal": "Turn informal guidelines into a written Acceptable Use Policy everyone signs. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Draft and distribute an Acceptable Use Policy covering email, Browse, remote work, and devices. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to security policies & procedures.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
+  {
+  "question": "Do you maintain version control for your security policy documents?",
+  "domain": "SECTION 2 - Security Policies & Procedures",
+  "max_score": 2,
+  "weight": 1,
+  "rules": {
+    "Yes, with full version history": 2,
+    "Yes, but inconsistently": 1,
+    "No": 0
+  },
+  "best_practices": {
+    "Yes, but inconsistently": "Implement a standardized version control process (e.g., Git or document history tracking) and ensure consistent usage across all security documents. Assign responsibility for maintaining version logs.",
+    "No": "Adopt a version control system to track changes to policies over time. This helps in audits, tracking updates, and managing responsibility. Assign an owner to manage document history."
+  },
+  "type": "scored",
+  "description": "This question evaluates version control practices applied to security policy documentation.",
+  "recommendation_level": "Medium",
+  "remediation_time_estimate": "Less than 1 week",
+  "evidence_required": false,
+  "control_mapping": [],
+  "subdomain": ""
+},
+
   {
     "question": "Have you conducted a formal risk assessment?",
     "domain": "SECTION 3 - Risk Management",
     "max_score": 2,
-    "weight": 2, "rules": {"Yes, within last year": 2, "Yes, but older": 1, "No": 0},
+    "weight": 2,
+    "rules": {
+      "Yes, within last year": 2,
+      "Yes, but older": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Yes, but older": "Update your risk assessment at least annually or after major changes.",
-      "No": "Conduct a structured risk assessment to identify and prioritize threats."
-    }
+      "Yes, but older": "Update your risk assessment at least annually or after major changes. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Conduct a structured risk assessment to identify and prioritize threats. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to risk management.",
+    "recommendation_level": "High",
+    "remediation_time_estimate": "1-2 weeks",
+    "evidence_required": true,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you maintain a risk register or log?",
     "domain": "SECTION 3 - Risk Management",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Partial / informal": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Partial / informal": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / informal": "Formalize the risk log and ensure it’s regularly updated.",
-      "No": "Create and maintain a risk register documenting threats, likelihood, and mitigations."
-    }
+      "Partial / informal": "Formalize the risk log and ensure it\u2019s regularly updated. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Create and maintain a risk register documenting threats, likelihood, and mitigations. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to risk management.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "How often are risks reviewed?",
     "domain": "SECTION 3 - Risk Management",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Quarterly": 2, "Annually": 1, "Ad hoc / never": 0},
+    "rules": {
+      "Quarterly": 2,
+      "Annually": 1,
+      "Ad hoc / never": 0
+    },
     "best_practices": {
-      "Annually": "Increase review frequency to quarterly or after significant incidents.",
-      "Ad hoc / never": "Establish regular (quarterly) risk review meetings."
-    }
+      "Annually": "Increase review frequency to quarterly or after significant incidents. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Ad hoc / never": "Establish regular (quarterly) risk review meetings. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to risk management.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Which do you see as top threats to your business?",
     "domain": "SECTION 3 - Risk Management",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Phishing": 2, "Ransomware": 2, "Insider threat": 2, "Downtime": 1, "Data breach": 2, "Other": 1},
+    "rules": {
+      "Phishing": 2,
+      "Ransomware": 2,
+      "Insider threat": 2,
+      "Downtime": 1,
+      "Data breach": 2,
+      "Other": 1
+    },
     "best_practices": {
-        "Phishing": "Provide regular employee training on identifying and reporting phishing attempts.",
-        "Ransomware": "Implement robust backup and recovery strategies; use advanced endpoint protection.",
-        "Insider threat": "Enforce strict access controls and monitor privileged user activities.",
-        "Downtime": "Develop and test a business continuity and disaster recovery plan.",
-        "Data breach": "Encrypt sensitive data at rest and in transit; implement data loss prevention (DLP) solutions."
-    }
+      "Phishing": "Provide regular employee training on identifying and reporting phishing attempts. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Ransomware": "Implement robust backup and recovery strategies; use advanced endpoint protection. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Insider threat": "Enforce strict access controls and monitor privileged user activities. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Downtime": "Develop and test a business continuity and disaster recovery plan. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Data breach": "Encrypt sensitive data at rest and in transit; implement data loss prevention (DLP) solutions. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to risk management.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "What technical controls are currently in place?",
     "domain": "SECTION 4 - Controls & Implementation",
     "max_score": 2,
-    "weight": 2, "rules": {"Antivirus": 2, "Firewalls": 2, "Encryption": 2, "VPN": 2, "Access logs": 2, "None / Not sure": 0},
+    "weight": 2,
+    "rules": {
+      "Antivirus": 2,
+      "Firewalls": 2,
+      "Encryption": 2,
+      "VPN": 2,
+      "Access logs": 2,
+      "None / Not sure": 0
+    },
     "best_practices": {
-      "Antivirus": "Ensure all endpoints have up-to-date antivirus/antimalware software.",
-      "Firewalls": "Maintain properly configured firewalls at network perimeters and on endpoints.",
-      "Encryption": "Encrypt sensitive data at rest (e.g., disk encryption) and in transit (e.g., HTTPS, VPNs).",
-      "VPN": "Use VPNs for all remote access to the corporate network.",
-      "Access logs": "Enable and regularly review access logs for all critical systems.",
-      "None / Not sure": "Prioritize deploying foundational technical controls: Antivirus, Firewalls, and data Encryption."
-    }
+      "Antivirus": "Ensure all endpoints have up-to-date antivirus/antimalware software. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Firewalls": "Maintain properly configured firewalls at network perimeters and on endpoints. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Encryption": "Encrypt sensitive data at rest (e.g., disk encryption) and in transit (e.g., HTTPS, VPNs). Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "VPN": "Use VPNs for all remote access to the corporate network. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Access logs": "Enable and regularly review access logs for all critical systems. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "None / Not sure": "Prioritize deploying foundational technical controls: Antivirus, Firewalls, and data Encryption. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to controls & implementation.",
+    "recommendation_level": "High",
+    "remediation_time_estimate": "1-2 weeks",
+    "evidence_required": true,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you perform data backups?",
     "domain": "SECTION 4 - Controls & Implementation",
     "max_score": 2,
-    "weight": 2, "rules": {"Yes, regularly": 2, "Sometimes / irregular": 1, "No": 0},
+    "weight": 2,
+    "rules": {
+      "Yes, regularly": 2,
+      "Sometimes / irregular": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Sometimes / irregular": "Automate daily or weekly backups with monitoring.",
-      "No": "Implement automatic, scheduled backups of critical systems."
-    }
+      "Sometimes / irregular": "Automate daily or weekly backups with monitoring. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Implement automatic, scheduled backups of critical systems. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to controls & implementation.",
+    "recommendation_level": "High",
+    "remediation_time_estimate": "1-2 weeks",
+    "evidence_required": true,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "How often are backups done?",
     "domain": "SECTION 4 - Controls & Implementation",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Daily": 2, "Weekly": 1, "Monthly": 1, "Not sure": 0},
+    "rules": {
+      "Daily": 2,
+      "Weekly": 1,
+      "Monthly": 1,
+      "Not sure": 0
+    },
     "best_practices": {
-      "Weekly": "Move to daily incremental backups to reduce data loss risk.",
-      "Monthly": "Shorten backup frequency to weekly or daily.",
-      "Not sure": "Audit and document your backup schedule."
-    }
+      "Weekly": "Move to daily incremental backups to reduce data loss risk. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Monthly": "Shorten backup frequency to weekly or daily. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Not sure": "Audit and document your backup schedule. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to controls & implementation.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Is access to sensitive data controlled by role (RBAC)?",
     "domain": "SECTION 4 - Controls & Implementation",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Partial / informal": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Partial / informal": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / informal": "Implement formal RBAC using directory services or IAM tools.",
-      "No": "Define roles and restrict access strictly based on business need."
-    }
+      "Partial / informal": "Implement formal RBAC using directory services or IAM tools. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Define roles and restrict access strictly based on business need. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to controls & implementation.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Are user activities on systems logged & reviewed?",
     "domain": "SECTION 4 - Controls & Implementation",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes, regularly": 2, "Sometimes": 1, "No": 0},
+    "rules": {
+      "Yes, regularly": 2,
+      "Sometimes": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Sometimes": "Schedule regular log reviews and automate alerts.",
-      "No": "Enable audit logging and review logs to detect anomalies."
-    }
+      "Sometimes": "Schedule regular log reviews and automate alerts. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Enable audit logging and review logs to detect anomalies. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to controls & implementation.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you undergo security audits?",
     "domain": "SECTION 5 - Compliance & Legal",
     "max_score": 2,
     "weight": 1,
-    "rules": {"External & internal": 2, "Only internal": 1, "None": 0},
+    "rules": {
+      "External & internal": 2,
+      "Only internal": 1,
+      "None": 0
+    },
     "best_practices": {
-      "Only internal": "Engage external auditors for an unbiased security review.",
-      "None": "Plan periodic internal and external security audits."
-    }
+      "Only internal": "Engage external auditors for an unbiased security review. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "None": "Plan periodic internal and external security audits. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to compliance & legal.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Have you had any compliance violations / penalties?",
     "domain": "SECTION 5 - Compliance & Legal",
     "max_score": 2,
     "weight": 1,
-    "rules": {"No": 2, "Yes": 0},
+    "rules": {
+      "No": 2,
+      "Yes": 0
+    },
     "best_practices": {
-      "Yes": "Review violation causes and update controls to prevent recurrence."
-    }
+      "Yes": "Review violation causes and update controls to prevent recurrence. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to compliance & legal.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Are vendor / partner contracts reviewed for data protection?",
     "domain": "SECTION 5 - Compliance & Legal",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Sometimes / informal": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Sometimes / informal": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Sometimes / informal": "Adopt a formal contract review checklist for data security.",
-      "No": "Integrate data protection clauses into all contracts."
-    }
+      "Sometimes / informal": "Adopt a formal contract review checklist for data security. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Integrate data protection clauses into all contracts. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to compliance & legal.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "How often are compliance policies formally reviewed?",
     "domain": "SECTION 5 - Compliance & Legal",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Annually": 2, "Every 2–3 years": 1, "Rarely / Never": 0},
+    "rules": {
+      "Annually": 2,
+      "Every 2\u20133 years": 1,
+      "Rarely / Never": 0
+    },
     "best_practices": {
-      "Every 2–3 years": "Increase review frequency to annual.",
-      "Rarely / Never": "Create a compliance review calendar with annual checkpoints."
-    }
+      "Every 2\u20133 years": "Increase review frequency to annual. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "Rarely / Never": "Create a compliance review calendar with annual checkpoints. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to compliance & legal.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do employees receive cybersecurity awareness training?",
     "domain": "SECTION 6 - Training & Awareness",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes, regularly": 2, "Only at onboarding / sometimes": 1, "No": 0},
+    "rules": {
+      "Yes, regularly": 2,
+      "Only at onboarding / sometimes": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Only at onboarding / sometimes": "Introduce quarterly refresher sessions.",
-      "No": "Develop and schedule mandatory cybersecurity training."
-    }
+      "Only at onboarding / sometimes": "Introduce quarterly refresher sessions. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Develop and schedule mandatory cybersecurity training. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to training & awareness.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you run simulated phishing tests?",
     "domain": "SECTION 6 - Training & Awareness",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Planned / sometimes": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Planned / sometimes": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Planned / sometimes": "Run simulations quarterly and analyze user responses.",
-      "No": "Implement phishing simulations to raise awareness."
-    }
+      "Planned / sometimes": "Run simulations quarterly and analyze user responses. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Implement phishing simulations to raise awareness. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to training & awareness.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Is there a defined process to report suspicious incidents?",
     "domain": "SECTION 6 - Training & Awareness",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes, documented": 2, "Informal / verbal only": 1, "No": 0},
+    "rules": {
+      "Yes, documented": 2,
+      "Informal / verbal only": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Informal / verbal only": "Document the reporting process and share it with staff.",
-      "No": "Create and communicate an incident reporting policy."
-    }
+      "Informal / verbal only": "Document the reporting process and share it with staff. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Create and communicate an incident reporting policy. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to training & awareness.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you have an Incident Response Plan?",
     "domain": "SECTION 7 - Incident Response",
     "max_score": 2,
-    "weight": 2, "rules": {"Yes, documented & tested": 2, "Documented but not tested": 1, "No": 0},
+    "weight": 2,
+    "rules": {
+      "Yes, documented & tested": 2,
+      "Documented but not tested": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Documented but not tested": "Schedule tabletop or live tests to validate the plan.",
-      "No": "Develop and document a response plan covering detection, containment, and recovery."
-    }
+      "Documented but not tested": "Schedule tabletop or live tests to validate the plan. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Develop and document a response plan covering detection, containment, and recovery. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to incident response.",
+    "recommendation_level": "High",
+    "remediation_time_estimate": "1-2 weeks",
+    "evidence_required": true,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Have you faced any actual cyber incidents or breaches?",
     "domain": "SECTION 7 - Incident Response",
     "max_score": 2,
     "weight": 1,
-    "rules": {"No": 2, "Yes": 0},
+    "rules": {
+      "No": 2,
+      "Yes": 0
+    },
     "best_practices": {
-      "Yes": "Review incident lessons learned and update response plans."
-    }
+      "Yes": "Review incident lessons learned and update response plans. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to incident response.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "What is your password policy?",
     "domain": "SECTION 8 - Passwords & Access",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Enforced length & complexity": 2, "Only length or complexity": 1, "No enforced policy": 0},
+    "rules": {
+      "Enforced length & complexity": 2,
+      "Only length or complexity": 1,
+      "No enforced policy": 0
+    },
     "best_practices": {
-      "Only length or complexity": "Add complexity requirements such as numbers or special characters.",
-      "No enforced policy": "Establish a formal password policy with minimum length and complexity."
-    }
+      "Only length or complexity": "Add complexity requirements such as numbers or special characters. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No enforced policy": "Establish a formal password policy with minimum length and complexity. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to passwords & access.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Are passwords stored securely (hashed / salted)?",
     "domain": "SECTION 8 - Passwords & Access",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Partial / unknown": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Partial / unknown": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Partial / unknown": "Verify password storage uses hashing with salts.",
-      "No": "Implement salted hashing or password vault solutions."
-    }
+      "Partial / unknown": "Verify password storage uses hashing with salts. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Implement salted hashing or password vault solutions. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to passwords & access.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "How is user access granted & revoked?",
     "domain": "SECTION 8 - Passwords & Access",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Formal documented process": 2, "Informal / manual": 1, "No process": 0},
+    "rules": {
+      "Formal documented process": 2,
+      "Informal / manual": 1,
+      "No process": 0
+    },
     "best_practices": {
-      "Informal / manual": "Document onboarding/offboarding steps with approvals.",
-      "No process": "Define and implement a user access provisioning policy."
-    }
+      "Informal / manual": "Document onboarding/offboarding steps with approvals. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No process": "Define and implement a user access provisioning policy. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to passwords & access.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   },
   {
     "question": "Do you conduct periodic access reviews?",
     "domain": "SECTION 8 - Passwords & Access",
     "max_score": 2,
     "weight": 1,
-    "rules": {"Yes": 2, "Sometimes": 1, "No": 0},
+    "rules": {
+      "Yes": 2,
+      "Sometimes": 1,
+      "No": 0
+    },
     "best_practices": {
-      "Sometimes": "Schedule quarterly reviews of active user accounts.",
-      "No": "Establish regular access reviews to detect unnecessary permissions."
-    }
+      "Sometimes": "Schedule quarterly reviews of active user accounts. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool.",
+      "No": "Establish regular access reviews to detect unnecessary permissions. Consider assigning an owner to this task and tracking progress in your risk register or compliance tool."
+    },
+    "type": "scored",
+    "description": "This question evaluates controls related to passwords & access.",
+    "recommendation_level": "Medium",
+    "remediation_time_estimate": "Less than 1 week",
+    "evidence_required": false,
+    "control_mapping": [],
+    "subdomain": ""
   }
 ]
